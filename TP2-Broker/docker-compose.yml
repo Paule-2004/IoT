@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  mqtt-broker:
+    image: eclipse-mosquitto:2.0
+    ports: ["1883:1883", "9001:9001"]
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+      - mosquitto_data:/mosquitto/data
+volumes:
+  mosquitto_data:
+
+
+
+#version: '3.8'
+#services:
+  #mqtt-broker:
+    #image: eclipse-mosquitto:2.0
+    #ports:
+    #  - "1883:1883"   # Port standard (à désactiver en prod)
+    #  - "8883:8883"   # Port TLS
+   #   - "9001:9001"   # WebSockets
+  #  volumes:
+   #   - ./mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+    #  - ./passwd:/etc/mosquitto/passwd
+     # - ./certs:/mosquitto/config/certs
+ #     - mosquitto_data:/mosquitto/data
+#volumes:
+#  mosquitto_data:

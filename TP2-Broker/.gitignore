@@ -1,0 +1,6 @@
+# Ne pas uploader les secrets et clés privées
+server.key
+server.crt
+passwd
+mosquitto_data/
+*.log
