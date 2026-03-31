@@ -4,6 +4,6 @@ server.crt
 passwd
 mosquitto_data/
 *.log
-*crt
-*csr
-*key
+*.crt
+*.csr
+*.key
